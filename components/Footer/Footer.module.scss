@@ -1,0 +1,109 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.up {
+  padding: 60px 0 68px;
+  border-bottom: 1px solid rgba(#0071bc, 0.25);
+
+  @include media("<desktop") {
+    padding: 40px 0;
+  }
+
+  &Frame {
+    display: flex;
+    justify-content: space-between;
+
+    @include media("<desktop") {
+      flex-direction: column;
+    }
+  }
+}
+
+.logo {
+  flex: 0 0 257px;
+  align-self: flex-start;
+  margin-right: 75px;
+
+  @include media("<desktop") {
+    flex-basis: auto;
+    margin: 0 0 35px;
+  }
+}
+
+.nav {
+  flex: 1 1 auto;
+  max-width: 762px;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-size-sm);
+  line-height: var(--line-height-sm);
+  padding-top: 6px;
+  margin: -20px;
+
+  @include media("<desktop") {
+    flex: 0 0 200px;
+    flex-wrap: wrap;
+  }
+
+  &List {
+    flex: 1 1 auto;
+    max-width: 224px;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+
+    &Title {
+      margin-bottom: 1em;
+    }
+
+    li {
+      margin-bottom: 0.6em;
+
+      &:first-child {
+        margin-bottom: 2.1em;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        color: var(--color-green);
+      }
+    }
+  }
+}
+
+.low {
+  padding: 19px 0 32px;
+
+  @include media("<phone-sm") {
+    padding: 10px 0 15px;
+  }
+
+  &Frame {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media("<phone-sm") {
+      flex-direction: column;
+    }
+  }
+}
+
+.copy {
+  font-size: 14px;
+  line-height: 1.2;
+
+  @include media("<phone-sm") {
+    padding-top: 10px;
+  }
+}

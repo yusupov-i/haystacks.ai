@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.section {
+  padding: 178px 0 186px;
+
+  @include media("<desktop-md") {
+    padding: 100px 0;
+  }
+
+  @include media("<phone") {
+    padding: 90px 0 60px;
+  }
+}

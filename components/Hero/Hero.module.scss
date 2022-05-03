@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 87px 0 130px;
+
+  @include media("<desktop") {
+    padding: 60px 0 50px;
+  }
+
+  @include media("<phone-sm") {
+    padding-bottom: 35px;
+  }
+}
+
+.title {
+  margin-bottom: 1.28em;
+
+  @include media("<phone") {
+    margin-bottom: 0.8em;
+  }
+
+  @include media("<phone-sm") {
+    max-width: 335px;
+
+    br {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.subTitle {
+  margin-bottom: 3.1em;
+
+  @include media("<phone") {
+    margin-bottom: 2em;
+
+    br {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62vw;
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      #0a0d1d 3.74%,
+      rgba(10, 13, 29, 0.2) 96.26%
+    );
+  }
+}
+
+.btnHolder {
+  @include media("<phone-sm") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

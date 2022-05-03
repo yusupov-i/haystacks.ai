@@ -1,0 +1,126 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.section {
+  --vertical-rhythm: 92px;
+  background: linear-gradient(
+    180deg,
+    #0a0d1d 0%,
+    #111f11 25%,
+    #1c311c 50%,
+    #111f11 88%,
+    #0a0d1d 100%
+  );
+  padding: 124px 0;
+
+  @include media("<desktop-md") {
+    --vertical-rhythm: 60px;
+    padding: 80px 0;
+  }
+}
+
+.headline {
+  text-align: center;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: var(--vertical-rhythm);
+  }
+
+  &_sm {
+    max-width: 866px;
+  }
+
+  &_md {
+    max-width: 980px;
+  }
+
+  &Title {
+    line-height: normal;
+    margin-bottom: 1.22em;
+
+    &_gradient {
+      background: linear-gradient(139.24deg, #71ff92 8.6%, #00ff00 89.84%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &Subtitle {
+    margin-right: auto;
+    margin-left: auto;
+
+    &_sm {
+      max-width: 614px;
+    }
+
+    &_md {
+      max-width: 954px;
+    }
+  }
+}
+
+.list {
+  counter-reset: list;
+  list-style: none;
+  padding: 0;
+  max-width: 606px;
+  margin: 0 auto calc(var(--vertical-rhythm) * 2.02);
+
+  @include media("<phone") {
+    max-width: 440px;
+  }
+
+  @include media("<phone-sm") {
+    max-width: 90%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 169px;
+    margin-bottom: calc(var(--vertical-rhythm) * 0.8472);
+
+    @include media("<phone") {
+      padding-left: 120px;
+    }
+
+    @include media("<phone-sm") {
+      padding-left: 98px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      font: 700 98.68px / 0.75 var(--ff-mono);
+      color: var(--color-green);
+      counter-increment: list;
+      content: "0" counter(list);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include media("<phone") {
+        font-size: 70px;
+      }
+
+      @include media("<phone-sm") {
+        font-size: 56px;
+      }
+    }
+  }
+}
+
+.imgHolder {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 2.8em;
+  }
+}

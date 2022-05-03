@@ -1,0 +1,350 @@
+@import "variables";
+@import "include-media";
+
+@import "normalize";
+
+// Variables:
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-blue-dark: #0a0d1d;
+  --color-green: #71ff92;
+  --color-green-light: #01ff00;
+
+  --text-size-default: 20px;
+  --line-height-default: 1.4;
+
+  @include media("<desktop") {
+    --text-size-default: 18px;
+  }
+
+  @include media("<phone") {
+    --text-size-default: 16px;
+    --line-height-default: 1.5;
+  }
+
+  --text-size-sm: 16px;
+  --line-height-sm: 1.2131;
+
+  --ff-default: "Maison Neue";
+  --ff-ext: "Maison Neue Extended";
+  --ff-mono: "Maison Neue Mono";
+
+  --container-size-default: 1194px;
+  --container-size-xl: 1250px;
+
+  --h1-fz: 50px;
+  --h2-fz: 40px;
+  --h3-fz: 30px;
+  --h4-fz: 25px;
+  --h5-fz: 20px;
+  --h6-fz: 16px;
+
+  @include media("<desktop") {
+    --h1-fz: 40px;
+    --h2-fz: 30px;
+    --h3-fz: 25px;
+    --h4-fz: 22px;
+  }
+
+  @include media("<phone") {
+    --h1-fz: 30px;
+    --h2-fz: 27px;
+    --h3-fz: 22px;
+    --h4-fz: 20px;
+    --h5-fz: 18px;
+  }
+
+  --vertical-rhythm: 1.5em;
+
+  --gutter: 30px;
+
+  @include media("<phone") {
+    --gutter: 20px;
+  }
+
+  @media only screen and (min-width: 812px) and (max-height: 414px) and (orientation: landscape) {
+    --gutter: 50px;
+  }
+}
+
+@font-face {
+  font-family: "Maison Neue";
+  src: url("../assets/fonts/MaisonNeue-Book.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeue-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue";
+  src: url("../assets/fonts/MaisonNeue-BookItalic.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeue-BookItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedBold.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedMedium.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("../assets/fonts/MaisonNeueMono-Regular.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeueMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedBoldItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("../assets/fonts/MaisonNeueMono-Italic.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeueMono-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedBookItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedBookItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("../assets/fonts/MaisonNeueMono-BoldItalic.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeueMono-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedMediumItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedMediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("../assets/fonts/MaisonNeueMono-Bold.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeueMono-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("../assets/fonts/MaisonNeue-ExtendedBook.woff2") format("woff2"),
+    url("../assets/fonts/MaisonNeue-ExtendedBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icomoon/icomoon.eot?wrjm97");
+  src: url("../assets/fonts/icomoon/icomoon.eot?wrjm97#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/icomoon/icomoon.ttf?wrjm97") format("truetype"),
+    url("../assets/fonts/icomoon/icomoon.woff?wrjm97") format("woff"),
+    url("../assets/fonts/icomoon/icomoon.svg?wrjm97#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-linkedin:before {
+  content: "\e903";
+}
+.icon-twitter:before {
+  content: "\e904";
+}
+.icon-youtube:before {
+  content: "\e905";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+
+  //fix iOS bugs reset paddings
+  padding: constant(safe-area-inset); //iOS 11
+  padding: env(safe-area-inset); //iOS 11.2+
+}
+
+body {
+  font: 400 var(--text-size-default) / var(--line-height-default)
+      var(--ff-default),
+    sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-blue-dark);
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  transition: all $transition-duration $transition-timing-function;
+}
+
+// Typography
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.225;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1,
+.h1 {
+  font-size: var(--h1-fz);
+  line-height: 1;
+  margin-bottom: 0.95em;
+}
+
+h2,
+.h2 {
+  font-size: var(--h2-fz);
+  line-height: 1;
+  margin-bottom: 0.86em;
+}
+
+h3,
+.h3 {
+  font-size: var(--h3-fz);
+}
+
+h4,
+.h4 {
+  font-size: var(--h4-fz);
+}
+
+h5,
+.h5 {
+  font-size: var(--h5-fz);
+}
+
+h6,
+.h6 {
+  font-size: var(--h6-fz);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--vertical-rhythm);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+mark {
+  color: var(--color-green-light);
+  background-color: transparent;
+}
+
+.text-center {
+  text-align: center;
+}

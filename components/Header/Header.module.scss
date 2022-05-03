@@ -1,0 +1,122 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.Header {
+  position: relative;
+  z-index: 5;
+  background-color: var(--color-blue-dark);
+  padding: 24px 0 23px;
+
+  @include media("<phone") {
+    padding: 20px 0 13px;
+  }
+
+  &_transparent {
+    background-color: transparent;
+  }
+
+  &-frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    flex: 0 0 256px;
+    margin: 6px 20px 0 0;
+
+    @include media("<phone") {
+      flex-basis: 192px;
+    }
+  }
+}
+
+.navOpener {
+  display: none;
+  flex: 0 0 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  margin-top: -11px;
+
+  @include media("<desktop") {
+    display: inline-flex;
+  }
+
+  &-active {
+    span {
+      opacity: 0;
+    }
+
+    &:before {
+      transform: translate3d(0, 6px, 0) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate3d(0, -6px, 0) rotate(135deg);
+    }
+  }
+
+  span,
+  &:before,
+  &:after {
+    position: absolute;
+    background-color: var(--color-white);
+    height: 3px;
+    width: 20px;
+    left: 2px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+  }
+
+  &:before {
+    top: 5px;
+  }
+
+  span {
+    top: 11px;
+  }
+
+  &:after {
+    top: 17px;
+  }
+}
+
+.navHolder {
+  $this: &;
+
+  @include media("<desktop") {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear;
+  }
+
+  &__inner {
+    @include media("<desktop") {
+      background-color: var(--color-blue-dark);
+      transition: transform 0.2s linear;
+      padding: 30px var(--gutter);
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  &_open {
+    @include media("<desktop") {
+      max-height: 1000px;
+    }
+
+    #{$this}__inner {
+      @include media("<desktop") {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
