@@ -14,7 +14,7 @@
     flex-direction: row-reverse;
 
     .img {
-      &:before {
+      &Decor_side {
         right: auto;
         left: 0;
         background: linear-gradient(
@@ -22,6 +22,15 @@
           #0a0d1d 3.74%,
           rgba(10, 13, 29, 0) 96.26%
         );
+      }
+    }
+
+    .info {
+      margin-right: 5%;
+
+      @include media("<tablet") {
+        text-align: left;
+        margin-right: 0;
       }
     }
   }
@@ -32,14 +41,50 @@
   width: 49%;
 
   @include media("<tablet") {
-    padding-top: 55%;
+    padding-top: 38%;
     width: auto;
     margin-left: calc(var(--gutter) * -1);
     margin-right: calc(var(--gutter) * -1);
   }
 
-  &:before {
+  &Decor_top,
+  &Decor_bottom,
+  &Decor_side {
     position: absolute;
+    z-index: 1;
+  }
+
+  &Decor_top,
+  &Decor_bottom {
+    height: 33.3333%;
+    width: 100%;
+
+    @include media("<tablet") {
+      height: 50%;
+    }
+  }
+
+  &Decor_bottom {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 13, 29, 0) 3.74%,
+      #0a0d1d 96.26%
+    );
+    bottom: 0;
+    right: 0;
+  }
+
+  &Decor_top {
+    background: linear-gradient(
+      0deg,
+      rgba(10, 13, 29, 0) 3.74%,
+      #0a0d1d 96.26%
+    );
+    top: 0;
+    right: 0;
+  }
+
+  &Decor_side {
     top: 0;
     bottom: 0;
     content: "";
@@ -50,22 +95,6 @@
     );
     right: 0;
     width: 80%;
-    z-index: 1;
-  }
-
-  &:after {
-    position: absolute;
-    content: "";
-    background: linear-gradient(
-      180deg,
-      rgba(10, 13, 29, 0) 3.74%,
-      #0a0d1d 96.26%
-    );
-    height: 33.3333%;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1;
   }
 }
 
@@ -76,9 +105,37 @@
   padding: 40px var(--gutter);
 
   @include media("<tablet") {
-    text-align: center;
+    text-align: right;
     max-width: none;
     width: 100%;
-    padding: 30px var(--gutter);
+    padding: 30px var(--gutter) 50px;
   }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 10px;
+  background: linear-gradient(139.24deg, #71ff92 8.6%, #00ff00 89.84%);
+  margin-bottom: 29px;
+
+  @include media("<tablet") {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 15px;
+  }
+
+  &Image {
+    @include media("<tablet") {
+      max-height: 70% !important;
+      min-height: 70% !important;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 18px;
 }

@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/include-media";
 
-.Nav {
+.nav {
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -13,39 +13,39 @@
   @include media("<phone-sm") {
     font-size: 20px;
   }
+}
 
-  &-list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0 -16px;
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 -16px;
 
-    @include media("<desktop") {
-      display: block;
-      text-align: center;
-      margin: -10px 0;
-    }
-
-    &__item {
-      padding: 0 16px;
-
-      @include media("<desktop") {
-        padding: 15px 0;
-      }
-    }
+  @include media("<desktop") {
+    display: block;
+    text-align: center;
+    margin: -10px 0;
   }
 
-  &-link {
-    position: relative;
-    color: var(--color-white);
-    text-decoration: none;
-    padding: 3px 0;
-    transition: all 0.2s linear;
+  &Item {
+    padding: 0 16px;
 
-    &:hover,
-    &:focus {
-      color: var(--color-green-light);
+    @include media("<desktop") {
+      padding: 15px 0;
     }
+  }
+}
+
+.link {
+  position: relative;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 3px 0;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &_active {
+    color: var(--color-green);
   }
 }
