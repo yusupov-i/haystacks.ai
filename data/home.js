@@ -33,7 +33,8 @@ const data = {
         title: 'Single Family Residential market is exploding',
         subTitle:
           'Yet the market remains fragmented and inefficient. Institutional capital has yet to penetrate this market in a meaningful way.'
-      }
+      },
+      sideShadow: true
     }
   ],
   featured: [
