@@ -14,7 +14,7 @@ export default function Hero({ title, subTitle }) {
           {title && <h1 className={styles.title}>{title}</h1>}
           {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
           <div className={styles.btnHolder}>
-            <Button href="/" size="xl">
+            <Button href="/#section-requestDemo" size="xl">
               Request demo
             </Button>
             <Button variant="link">learn more</Button>

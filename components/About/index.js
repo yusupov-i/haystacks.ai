@@ -84,7 +84,9 @@ export default function About() {
           </p>
         </div>
         <p className="text-center">
-          <Button variant="outline">request demo</Button>
+          <Button href="/#section-requestDemo" variant="outline">
+            request demo
+          </Button>
         </p>
       </Container>
     </section>

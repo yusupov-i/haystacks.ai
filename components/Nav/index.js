@@ -22,7 +22,7 @@ export default function Nav() {
           </Link>
         </li>
         <li className={styles['Nav-list__item']}>
-          <Button href="/" variant="outline" size="xl">
+          <Button href="/#section-requestDemo" variant="outline" size="xl">
             REQUEST DEMO
           </Button>
         </li>
