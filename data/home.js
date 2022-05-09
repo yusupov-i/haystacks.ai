@@ -10,7 +10,8 @@ const data = {
     title: (
       <span>
         Machine intelligence for <br />
-        residential underwriting. <mark>At scale.</mark>
+        residential underwriting.{' '}
+        <mark style={{ whiteSpace: 'nowrap' }}>At scale.</mark>
       </span>
     ),
     subTitle: (

@@ -8,6 +8,7 @@ import About from '../components/About';
 import Featured from '../components/Featured';
 import RequestDemo from '../sections/RequestDemo';
 import HeroInner from '../components/HeroInner';
+import Divider from '../components/Divider';
 
 export default function Technology() {
   return (
@@ -18,6 +19,7 @@ export default function Technology() {
       </Head>
       <HeroInner {...data.hero} />
       <Promo items={data.promo} />
+      <Divider />
     </>
   );
 }

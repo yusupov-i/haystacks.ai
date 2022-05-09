@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from './Footer.module.scss';
 import Banner from '../Banner';
-import logo from '../../assets/img/logo-white.png';
+import logo from '../../assets/img/logo-white.svg';
 import Container from '../Container';
 import classNames from 'classnames';
 import Social from '../Social';

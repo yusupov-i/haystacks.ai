@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.frame {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  @include media("<phone-sm") {
+    display: block;
+  }
+}
+
+.img {
+  align-self: flex-start;
+  position: relative;
+  flex: 0 0 358px;
+  user-select: none;
+
+  @include media("<desktop") {
+    flex-basis: 320px;
+  }
+
+  @include media("<tablet") {
+    flex-basis: 240px;
+  }
+
+  @include media("<phone") {
+    flex-basis: 180px;
+  }
+
+  @include media("<phone-sm") {
+    margin: 0 calc(var(--gutter) * -1);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#01ff00, 0.08);
+    mix-blend-mode: lighten;
+  }
+}
+
+.info {
+  align-self: center;
+  flex: 1;
+  max-width: 685px;
+  margin-right: 8%;
+
+  @include media("<phone") {
+    margin-right: 5%;
+  }
+
+  @include media("<phone-sm") {
+    padding-top: calc(var(--gutter) * 1.5);
+    margin-right: 0;
+  }
+}
+
+.name {
+  color: var(--color-green-light);
+  margin-bottom: 0.22em;
+}

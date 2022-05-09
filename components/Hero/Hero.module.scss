@@ -4,7 +4,7 @@
 .section {
   position: relative;
   overflow: hidden;
-  padding: 87px 0 130px;
+  padding: 90px 0 130px;
 
   @include media("<desktop") {
     padding: 60px 0 50px;
@@ -16,7 +16,8 @@
 }
 
 .title {
-  margin-bottom: 1.28em;
+  font-family: var(--ff-ext);
+  margin-bottom: 0.78em;
 
   @include media("<phone") {
     margin-bottom: 0.8em;

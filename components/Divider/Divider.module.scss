@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.divider {
+  height: 130px;
+
+  @include media("<tablet") {
+    height: 90px;
+  }
+
+  &_up {
+    background: linear-gradient(180deg, #0a0d1d 0%, #111f11 100%);
+  }
+}

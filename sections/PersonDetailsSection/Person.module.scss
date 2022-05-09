@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/include-media";
+
+.section {
+  position: relative;
+  padding: 65px 0 100px;
+
+  @include media("<desktop") {
+    padding-top: 40px;
+  }
+
+  @include media("<phone") {
+    padding-bottom: 80px;
+  }
+
+  @include media("<phone-sm") {
+    padding-top: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #0a0d1d 0%, #111f11 100%);
+  }
+}

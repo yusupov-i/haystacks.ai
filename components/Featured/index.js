@@ -16,7 +16,7 @@ export default function Featured({ items }) {
 
               return (
                 <div className={styles.item} key={i}>
-                  <Image {...img} />
+                  <Image loading="eager" {...img} />
                 </div>
               );
             })}

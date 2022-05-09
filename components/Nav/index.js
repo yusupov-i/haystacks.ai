@@ -28,7 +28,7 @@ export default function Nav() {
           </Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/">
+          <Link href="/about">
             <a
               className={cn(styles.link, {
                 [styles.link_active]: router.pathname === '/about'

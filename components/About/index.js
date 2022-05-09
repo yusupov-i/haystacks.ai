@@ -58,7 +58,7 @@ export default function About() {
           </p>
         </div>
         <div className={styles.imgHolder}>
-          <Image src={img} alt="multiple 3D map layers" />
+          <Image loading="eager" src={img} alt="multiple 3D map layers" />
         </div>
         <div className={styles.headline}>
           <h2

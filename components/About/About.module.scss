@@ -40,6 +40,7 @@
     margin-bottom: 1.22em;
 
     &_gradient {
+      position: relative;
       background: linear-gradient(139.24deg, #71ff92 8.6%, #00ff00 89.84%);
       background-clip: text;
       -webkit-background-clip: text;
@@ -121,6 +122,6 @@
   text-align: center;
 
   &:not(:last-child) {
-    margin-bottom: 2.8em;
+    margin-bottom: calc(0.6 * var(--vertical-rhythm));
   }
 }

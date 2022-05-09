@@ -22,7 +22,7 @@ export default function Hero({ title, subTitle }) {
         </>
       </Container>
       <div className={styles.bg}>
-        <Image src={img} objectFit="cover" layout="fill" />
+        <Image loading="eager" src={img} objectFit="cover" layout="fill" />
       </div>
     </section>
   );

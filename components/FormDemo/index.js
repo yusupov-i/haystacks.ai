@@ -18,7 +18,6 @@ export default function FormDemo() {
       company: '',
       position: '',
       whereFrom: '',
-      whereFrom1: '',
       message: ''
     },
     validationSchema: Yup.object({

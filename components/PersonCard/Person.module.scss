@@ -1,0 +1,44 @@
+.card {
+  width: 100%;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#01ff00, 0.08);
+    mix-blend-mode: lighten;
+  }
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 25px 0 5px;
+
+  &Wrap {
+    flex: 1;
+  }
+}
+
+.name {
+  margin-bottom: 0.3em;
+}
+
+.position {
+  font-size: var(--text-size-sm);
+
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
