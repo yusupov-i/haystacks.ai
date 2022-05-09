@@ -17,10 +17,27 @@
         margin-right: auto;
       }
     }
+
+    &_left {
+      padding: 86px 0 52px;
+
+      @include media("<desktop") {
+        padding: 60px 0 45px;
+      }
+
+      .headline {
+        text-align: left;
+        max-width: 784px;
+      }
+
+      .title {
+        margin-bottom: 0.35em;
+      }
+    }
   }
 }
 
 .title {
   color: var(--color-green-light);
-  margin-bottom: 1.1em;
+  margin-bottom: 0.86em;
 }

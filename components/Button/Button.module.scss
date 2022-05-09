@@ -52,7 +52,8 @@
     }
   }
 
-  &_link {
+  &_link,
+  &_link-back {
     background-color: transparent;
     border-color: transparent;
     color: var(--color-white);
@@ -63,9 +64,9 @@
       color: var(--color-green-light);
     }
 
-    &:after {
+    &:after,
+    &:before {
       letter-spacing: 0;
-      content: "\e901";
       font-family: "icomoon" !important;
       font-size: 9px;
       line-height: 1;
@@ -77,8 +78,29 @@
       justify-content: center;
       background-color: var(--color-green-light);
       color: var(--color-black);
-      margin-left: 14px;
       transform: translateY(-1px);
+    }
+
+    &:after {
+      content: "\e901";
+      margin-left: 14px;
+    }
+
+    &:before {
+      content: "\e906";
+      margin-right: 14px;
+    }
+  }
+
+  &_link {
+    &:before {
+      display: none;
+    }
+  }
+
+  &_link-back {
+    &:after {
+      display: none;
     }
   }
 

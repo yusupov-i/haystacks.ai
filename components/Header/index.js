@@ -1,17 +1,24 @@
-import { useState, useLayoutEffect } from 'react';
-
-import cn from 'classnames';
-import styles from './Header.module.scss';
-
-import logo from '../../assets/img/logo-white.png';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Container from '../Container';
 import Image from 'next/image';
+import cn from 'classnames';
+
+import styles from './Header.module.scss';
+import Container from '../Container';
 import Nav from '../Nav';
-import classNames from 'classnames';
+import logo from '../../assets/img/logo-white.svg';
 
 export default function Header({ transparent = true }) {
   const [navOpen, setNavOpen] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (navOpen) {
+      setNavOpen(!navOpen);
+    }
+  }, [router.asPath]);
 
   const handleNavClick = () => {
     if (!navOpen) {
@@ -33,7 +40,7 @@ export default function Header({ transparent = true }) {
         <div className={styles['Header-frame']}>
           <Link href="/" passHref>
             <a className={styles['Header-logo']}>
-              <Image src={logo} alt="Haystack logo" />
+              <Image src={logo} loading="eager" alt="Haystack logo" />
             </a>
           </Link>
           <div
@@ -46,7 +53,7 @@ export default function Header({ transparent = true }) {
             </div>
           </div>
           <span
-            className={classNames(styles.navOpener, {
+            className={cn(styles.navOpener, {
               [styles['navOpener-active']]: navOpen
             })}
             onClick={handleNavClick}
