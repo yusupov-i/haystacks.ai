@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero {...data.hero} />
-      <Banner text={data.banner} />
+      <Banner {...data.banner} />
       <Promo items={data.promo} id="section-promo" />
       <About />
       <Featured items={data.featured} />

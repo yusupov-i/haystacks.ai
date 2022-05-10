@@ -21,8 +21,10 @@ export default function Button({
   );
 
   return href ? (
-    <Link href={href} {...props} passHref>
-      <a className={cl}>{children}</a>
+    <Link href={href} passHref>
+      <a className={cl} {...props}>
+        {children}
+      </a>
     </Link>
   ) : (
     <button className={cl} {...props}>

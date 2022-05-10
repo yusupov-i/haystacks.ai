@@ -64,7 +64,12 @@ export default function About() {
         </Motion>
         <Motion animation="fadeIn" delayIndex={1.15}>
           <div className={styles.imgHolder}>
-            <Image loading="eager" src={img} alt="multiple 3D map layers" />
+            <Image
+              loading="eager"
+              layout="responsive"
+              src={img}
+              alt="multiple 3D map layers"
+            />
           </div>
         </Motion>
         <Motion animation="fadeIn" delayIndex={1.15}>

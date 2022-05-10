@@ -19,10 +19,10 @@ export default function Promo({ items, ...props }) {
                   layout="fill"
                   objectFit="cover"
                 />
-                <div className={styles.imgDecor_top}></div>
-                <div className={styles.imgDecor_bottom}></div>
-                {sideShadow && <div className={styles.imgDecor_side}></div>}
               </Motion>
+              <div className={styles.imgDecor_top}></div>
+              <div className={styles.imgDecor_bottom}></div>
+              {sideShadow && <div className={styles.imgDecor_side}></div>}
             </div>
             <div className={styles.info}>
               <Motion animation="fadeInUp" delayIndex={1.5}>

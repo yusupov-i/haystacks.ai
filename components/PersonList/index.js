@@ -60,15 +60,3 @@ export default function PersonList({ cards }) {
     </motion.ul>
   );
 }
-
-{
-  /* <ul className={styles.list}>
-      {cards.map((card) => {
-        return (
-          <li className={styles.listItem} key={card.name}>
-            <PersonCard {...card} />
-          </li>
-        );
-      })}
-    </ul> */
-}

@@ -112,8 +112,5 @@
 
 .imgHolder {
   text-align: center;
-
-  &:not(:last-child) {
-    margin-bottom: calc(0.6 * var(--vertical-rhythm));
-  }
+  margin-bottom: var(--vertical-rhythm);
 }
