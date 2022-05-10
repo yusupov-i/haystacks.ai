@@ -22,4 +22,18 @@
       rgb(17, 31, 17, 1) 100%
     );
   }
+
+  p {
+    & + h4 {
+      margin-top: 1.5em;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

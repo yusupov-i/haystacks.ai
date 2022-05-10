@@ -11,7 +11,10 @@ import Social from '../Social';
 export default function Footer() {
   return (
     <footer>
-      <Banner text="Work at Haystacks.ai - We are looking for people who want to build and disrupt" />
+      <Banner
+        text="Work at Haystacks.ai - We are looking for people who want to build and disrupt"
+        href="mailto:someone@web.com"
+      />
       <div className={styles.up}>
         <Container>
           <div className={styles.upFrame}>
@@ -80,7 +83,7 @@ export default function Footer() {
           <div className={styles.lowFrame}>
             {/* <Social /> */}
             <span className={styles.copy}>
-              2022 ©️ HAYSTACKS.AI · <Link href="/terms">Terms of Use</Link>
+              2022 &copy; HAYSTACKS.AI · <Link href="/terms">Terms of Use</Link>
             </span>
           </div>
         </Container>

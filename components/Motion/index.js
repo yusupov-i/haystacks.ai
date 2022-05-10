@@ -50,7 +50,7 @@ const animationVariant = {
 
 export default function Motion({
   animation = 'fadeInUp',
-  delayIndex = 0,
+  delayIndex = 1,
   children
 }) {
   const control = useAnimation();

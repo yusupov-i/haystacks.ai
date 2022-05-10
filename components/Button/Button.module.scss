@@ -15,13 +15,19 @@
   text-transform: uppercase;
   letter-spacing: 0.21em;
   text-decoration: none;
-  margin-right: 36px;
   transition: all 0.2s ease;
 
   @include media("<phone") {
     font-size: 13px;
     padding: 12px 27px;
-    margin-right: 27px;
+  }
+
+  & + .Button {
+    margin-left: 36px;
+
+    @include media("<phone") {
+      margin-left: 27px;
+    }
   }
 
   &:last-child {
@@ -88,11 +94,19 @@
     &:after {
       content: "\e901";
       margin-left: 14px;
+
+      @include media("<phone") {
+        margin-left: 7px;
+      }
     }
 
     &:before {
       content: "\e906";
       margin-right: 14px;
+
+      @include media("<phone") {
+        margin-right: 7px;
+      }
     }
   }
 
