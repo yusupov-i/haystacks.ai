@@ -1,12 +1,7 @@
 import Head from 'next/head';
 
 import data from '../data/technology';
-import Hero from '../components/Hero';
-import Banner from '../components/Banner';
 import Promo from '../components/Promo';
-import About from '../components/About';
-import Featured from '../components/Featured';
-import RequestDemo from '../sections/RequestDemo';
 import HeroInner from '../components/HeroInner';
 import Divider from '../components/Divider';
 

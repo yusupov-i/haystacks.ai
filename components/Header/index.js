@@ -8,6 +8,7 @@ import styles from './Header.module.scss';
 import Container from '../Container';
 import Nav from '../Nav';
 import logo from '../../assets/img/logo-white.svg';
+// import Motion from '../Motion';
 
 export default function Header({ transparent = true }) {
   const [navOpen, setNavOpen] = useState(false);

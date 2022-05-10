@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Motion from '../Motion';
 import styles from './ScrollingLogo.module.scss';
 
 export default function ScrollingLogo() {
@@ -36,13 +37,15 @@ export default function ScrollingLogo() {
   }, []);
 
   return (
-    <div className={styles.wrap}>
-      <div
-        className={styles.line}
-        style={{ transform: `translateX(${position}%)` }}
-      >
-        <LineElements />
+    <Motion animation="fadeIn">
+      <div className={styles.wrap}>
+        <div
+          className={styles.line}
+          style={{ transform: `translateX(${position}%)` }}
+        >
+          <LineElements />
+        </div>
       </div>
-    </div>
+    </Motion>
   );
 }

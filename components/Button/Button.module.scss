@@ -60,6 +60,10 @@
     padding: 0;
     margin: 16px 0;
 
+    @include media("<phone") {
+      margin: 9px 0;
+    }
+
     &:hover {
       color: var(--color-green-light);
     }
