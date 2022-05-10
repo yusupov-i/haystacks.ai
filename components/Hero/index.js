@@ -1,29 +1,50 @@
-import styles from './Hero.module.scss';
+import ReactPlayer from 'react-player';
 
+import styles from './Hero.module.scss';
+import Motion from '../Motion';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
-
-import img from '../../assets/img/hero-img01.jpg';
-import Image from 'next/image';
 
 export default function Hero({ title, subTitle }) {
   return (
     <section className={styles.section}>
       <Container>
         <>
-          {title && <h1 className={styles.title}>{title}</h1>}
-          {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
-          <div className={styles.btnHolder}>
-            <Button href="/#section-requestDemo" size="xl">
-              Request demo
-            </Button>
-            <Button variant="link">learn more</Button>
-          </div>
+          {title && (
+            <h1 className={styles.title}>
+              <Motion delayIndex={2}>{title}</Motion>
+            </h1>
+          )}
+          {subTitle && (
+            <p className={styles.subTitle}>
+              <Motion delayIndex={3}>{subTitle}</Motion>
+            </p>
+          )}
+          <Motion delayIndex={4}>
+            <div className={styles.btnHolder}>
+              <Button href="/#section-requestDemo" size="xl">
+                Request demo
+              </Button>
+              <Button variant="link" href="/#section-promo">
+                learn more
+              </Button>
+            </div>
+          </Motion>
         </>
       </Container>
-      <div className={styles.bg}>
-        <Image loading="eager" src={img} objectFit="cover" layout="fill" />
-      </div>
+      <Motion animation="fadeIn" delayIndex={4}>
+        <div className={styles.bg}>
+          <ReactPlayer
+            playing={true}
+            loop={true}
+            muted={true}
+            playsinline={true}
+            width="100%"
+            height="100%"
+            url="https://haystacks.ai/_next/static/videos/technology-9db37bc78be6fa80bd00822c1d31f4b2.mp4"
+          />
+        </div>
+      </Motion>
     </section>
   );
 }

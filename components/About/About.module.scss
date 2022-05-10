@@ -21,11 +21,7 @@
 
 .headline {
   text-align: center;
-  margin: 0 auto;
-
-  &:not(:last-child) {
-    margin-bottom: var(--vertical-rhythm);
-  }
+  margin: 0 auto var(--vertical-rhythm);
 
   &_sm {
     max-width: 866px;
@@ -37,7 +33,7 @@
 
   &Title {
     line-height: normal;
-    margin-bottom: 1.22em;
+    margin-bottom: 0.72em;
 
     &_gradient {
       position: relative;
@@ -77,10 +73,6 @@
     max-width: 90%;
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   li {
     position: relative;
     padding-left: 169px;
@@ -104,7 +96,7 @@
       counter-increment: list;
       content: "0" counter(list);
       position: absolute;
-      top: 0;
+      top: 0.05em;
       left: 0;
 
       @include media("<phone") {

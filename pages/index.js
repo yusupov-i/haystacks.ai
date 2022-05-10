@@ -7,7 +7,7 @@ import Banner from '../components/Banner';
 import Promo from '../components/Promo';
 import About from '../components/About';
 import Featured from '../components/Featured';
-import RequestDemo from '../sections/RequestDemo';
+import RequestDemo from '../sections/RequestDemoSection';
 
 export default function Home() {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <Hero {...data.hero} />
       <Banner text={data.banner} />
-      <Promo items={data.promo} />
+      <Promo items={data.promo} id="section-promo" />
       <About />
       <Featured items={data.featured} />
       <RequestDemo />

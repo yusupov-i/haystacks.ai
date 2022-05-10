@@ -5,9 +5,15 @@
   position: relative;
   z-index: 5;
   background-color: var(--color-blue-dark);
+  height: 108px;
   padding: 24px 0 23px;
 
+  @include media("<desktop") {
+    height: 106px;
+  }
+
   @include media("<phone") {
+    height: 82px;
     padding: 20px 0 13px;
   }
 

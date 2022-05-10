@@ -2,6 +2,7 @@ import cn from 'classnames';
 
 import styles from './HeroInner.module.scss';
 import Container from '../Container';
+import Motion from '../Motion';
 
 export default function HeroInner({ title, subTitle, variant = 'center' }) {
   return (
@@ -10,8 +11,16 @@ export default function HeroInner({ title, subTitle, variant = 'center' }) {
     >
       <Container>
         <div className={styles.headline}>
-          {title && <h1 className={styles.title}>{title}</h1>}
-          {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
+          {title && (
+            <Motion>
+              <h1 className={styles.title}>{title}</h1>
+            </Motion>
+          )}
+          {subTitle && (
+            <Motion delayIndex={1.2}>
+              <p className={styles.subTitle}>{subTitle}</p>
+            </Motion>
+          )}
         </div>
       </Container>
     </section>

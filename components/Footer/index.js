@@ -10,7 +10,7 @@ import Social from '../Social';
 
 export default function Footer() {
   return (
-    <>
+    <footer>
       <Banner text="Work at Haystacks.ai - We are looking for people who want to build and disrupt" />
       <div className={styles.up}>
         <Container>
@@ -23,7 +23,7 @@ export default function Footer() {
               </Link>
             </div>
             <nav className={styles.nav}>
-              <ul className={styles.navList}>
+              {/* <ul className={styles.navList}>
                 <li>
                   <h3 className={classNames('h6', styles.navListTitle)}>
                     Use Cases
@@ -38,27 +38,27 @@ export default function Footer() {
                 <li>
                   <Link href="/">Data-as-a-service</Link>
                 </li>
-              </ul>
+              </ul> */}
               <ul className={styles.navList}>
                 <li>
                   <h3 className={classNames('h6', styles.navListTitle)}>
-                    Technology
+                    <Link href="/technology">Technology</Link>
                   </h3>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">Platform</Link>
                 </li>
                 <li>
                   <Link href="/">Our Data</Link>
-                </li>
+                </li> */}
               </ul>
               <ul className={styles.navList}>
                 <li>
                   <h3 className={classNames('h6', styles.navListTitle)}>
-                    About
+                    <Link href="/about">About</Link>
                   </h3>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">Mission</Link>
                 </li>
                 <li>
@@ -69,7 +69,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/">Careers</Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
@@ -78,13 +78,13 @@ export default function Footer() {
       <div className={styles.low}>
         <Container>
           <div className={styles.lowFrame}>
-            <Social />
+            {/* <Social /> */}
             <span className={styles.copy}>
-              2022 Copyright All Rights Reserved.
+              2022 ©️ HAYSTACKS.AI · <Link href="/terms">Terms of Use</Link>
             </span>
           </div>
         </Container>
       </div>
-    </>
+    </footer>
   );
 }

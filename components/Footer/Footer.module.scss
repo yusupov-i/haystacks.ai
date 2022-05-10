@@ -34,14 +34,13 @@
   flex: 1 1 auto;
   max-width: 762px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   font-size: var(--text-size-sm);
   line-height: var(--line-height-sm);
   padding-top: 6px;
   margin: -20px;
 
   @include media("<desktop") {
-    flex: 0 0 200px;
     flex-wrap: wrap;
   }
 
@@ -89,7 +88,7 @@
 
   &Frame {
     display: flex;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 
@@ -105,5 +104,14 @@
 
   @include media("<phone-sm") {
     padding-top: 10px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

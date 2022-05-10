@@ -19,7 +19,7 @@
     }
 
     &_left {
-      padding: 86px 0 52px;
+      padding: 91px 0 52px;
 
       @include media("<desktop") {
         padding: 60px 0 45px;
@@ -27,11 +27,11 @@
 
       .headline {
         text-align: left;
-        max-width: 784px;
+        max-width: 764px;
       }
 
       .title {
-        margin-bottom: 0.35em;
+        margin-bottom: 0.22em;
       }
     }
   }

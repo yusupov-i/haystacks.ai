@@ -1,4 +1,6 @@
 import Image from 'next/image';
+
+import Motion from '../Motion';
 import Container from '../Container';
 import styles from './Featured.module.scss';
 
@@ -7,7 +9,7 @@ export default function Featured({ items }) {
     <section className={styles.section}>
       <Container>
         <div className={styles.headline}>
-          Haystacks.AI has been featured on:
+          <Motion>Haystacks.AI has been featured on:</Motion>
         </div>
         <div className={styles.list}>
           {items &&
@@ -16,7 +18,9 @@ export default function Featured({ items }) {
 
               return (
                 <div className={styles.item} key={i}>
-                  <Image loading="eager" {...img} />
+                  <Motion delayIndex={i + 0.1}>
+                    <Image loading="eager" {...img} />
+                  </Motion>
                 </div>
               );
             })}

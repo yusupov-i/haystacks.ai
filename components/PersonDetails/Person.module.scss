@@ -13,7 +13,6 @@
 
 .img {
   align-self: flex-start;
-  position: relative;
   flex: 0 0 358px;
   user-select: none;
 
@@ -33,15 +32,19 @@
     margin: 0 calc(var(--gutter) * -1);
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(#01ff00, 0.08);
-    mix-blend-mode: lighten;
+  &Frame {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#01ff00, 0.08);
+      mix-blend-mode: lighten;
+    }
   }
 }
 
