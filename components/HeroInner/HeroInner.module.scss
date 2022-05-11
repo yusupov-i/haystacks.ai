@@ -4,10 +4,10 @@
 .section {
   &_variant {
     &_center {
-      padding: 91px 0 25px;
+      padding: 92px 0;
 
       @include media("<desktop") {
-        padding: 60px 0 35px;
+        padding: 60px 0;
       }
 
       .headline {
@@ -19,7 +19,7 @@
     }
 
     &_left {
-      padding: 91px 0 52px;
+      padding: 92px 0 52px;
 
       @include media("<desktop") {
         padding: 60px 0 45px;
@@ -29,15 +29,11 @@
         text-align: left;
         max-width: 764px;
       }
-
-      .title {
-        margin-bottom: 0.22em;
-      }
     }
   }
 }
 
 .title {
   color: var(--color-green-light);
-  margin-bottom: 0.86em;
+  margin-bottom: 0.22em;
 }

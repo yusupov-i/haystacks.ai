@@ -31,6 +31,10 @@
     max-width: 980px;
   }
 
+  &_margin_half {
+    margin-bottom: calc(var(--vertical-rhythm) / 2);
+  }
+
   &Title {
     line-height: normal;
     margin-bottom: 0.72em;
@@ -73,7 +77,7 @@
     max-width: 90%;
   }
 
-  li {
+  &Item {
     position: relative;
     padding-left: 169px;
     margin-bottom: calc(var(--vertical-rhythm) * 0.8472);

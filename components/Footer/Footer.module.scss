@@ -6,15 +6,16 @@
   border-bottom: 1px solid rgba(#0071bc, 0.25);
 
   @include media("<desktop") {
-    padding: 40px 0;
+    padding: 40px 0 30px;
   }
 
   &Frame {
     display: flex;
     justify-content: space-between;
 
-    @include media("<desktop") {
+    @include media("<phone") {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 }
@@ -26,7 +27,15 @@
 
   @include media("<desktop") {
     flex-basis: auto;
-    margin: 0 0 35px;
+  }
+
+  @include media("<phone") {
+    margin: 0 0 20px;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -35,6 +44,7 @@
   max-width: 762px;
   display: flex;
   // justify-content: space-between;
+  justify-content: flex-end;
   font-size: var(--text-size-sm);
   line-height: var(--line-height-sm);
   padding-top: 6px;
@@ -45,7 +55,7 @@
   }
 
   &List {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
     max-width: 224px;
     list-style: none;
     margin: 0;

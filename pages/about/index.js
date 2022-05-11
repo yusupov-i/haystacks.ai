@@ -12,7 +12,7 @@ export default function About() {
     <>
       <Head>
         <title>Haystacks.ai Technology</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <HeroInner {...data.hero} variant="left" />
       <PersonSection>
@@ -23,7 +23,7 @@ export default function About() {
           >
             <h2 style={{ marginBottom: '1.25em' }}>
               {i === 0 ? (
-                <Motion delayIndex={2.8}>{department.title}</Motion>
+                <Motion delayIndex={0.75}>{department.title}</Motion>
               ) : (
                 <Motion>{department.title}</Motion>
               )}

@@ -27,7 +27,7 @@ export default function AboutSingle() {
     <>
       <Head>
         <title>Haystacks.ai</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       {personDetails[0] ? (
         <PersonDetailsSection data={personDetails[0]} />

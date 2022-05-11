@@ -12,7 +12,7 @@ export default function Promo({ items, ...props }) {
         return (
           <div className={styles.item} key={i}>
             <div className={styles.img}>
-              <Motion animation="fadeIn">
+              <Motion animation="fadeIn" threshold={0.35}>
                 <Image
                   loading="eager"
                   {...img}
@@ -25,7 +25,7 @@ export default function Promo({ items, ...props }) {
               {sideShadow && <div className={styles.imgDecor_side}></div>}
             </div>
             <div className={styles.info}>
-              <Motion animation="fadeInUp" delayIndex={1.5}>
+              <Motion animation="fadeInUp" delayIndex={0.45}>
                 {icon && (
                   <div className={styles.icon}>
                     <Image
