@@ -24,7 +24,8 @@ const data = {
   },
   banner: {
     text: 'Haystacks.AI Secures $5 Million In Seed Funding Led by Streamlined Ventures and Colle Capital',
-    href: 'https://www.businesswire.com/news/home/20211216005226/en/Haystacks.AI-Secures-5-Million-In-Seed-Funding-Led-by-Streamlined-Ventures-and-Colle-Capital'
+    href: 'https://www.businesswire.com/news/home/20211216005226/en/Haystacks.AI-Secures-5-Million-In-Seed-Funding-Led-by-Streamlined-Ventures-and-Colle-Capital',
+    outer: true
   },
   promo: [
     {

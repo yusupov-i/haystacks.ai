@@ -18,7 +18,7 @@ export default function Featured({ items }) {
 
               return (
                 <div className={styles.item} key={i}>
-                  <Motion delayIndex={i + 0.05}>
+                  <Motion delayIndex={i / 6}>
                     <Image loading="eager" {...img} />
                   </Motion>
                 </div>

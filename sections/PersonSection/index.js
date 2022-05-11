@@ -7,7 +7,7 @@ import Motion from '../../components/Motion';
 export default function PersonSection({ children }) {
   return (
     <section className={styles.section}>
-      <Motion delayIndex={2}>
+      <Motion animation="fadeIn" delayIndex={0.5}>
         <ScrollingLogo />
       </Motion>
       <Container>{children}</Container>

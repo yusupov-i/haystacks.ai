@@ -12,15 +12,15 @@ export default function Hero({ title, subTitle }) {
         <>
           {title && (
             <h1 className={styles.title}>
-              <Motion delayIndex={2}>{title}</Motion>
+              <Motion>{title}</Motion>
             </h1>
           )}
           {subTitle && (
             <p className={styles.subTitle}>
-              <Motion delayIndex={3}>{subTitle}</Motion>
+              <Motion delayIndex={0.25}>{subTitle}</Motion>
             </p>
           )}
-          <Motion delayIndex={4}>
+          <Motion delayIndex={0.5}>
             <div className={styles.btnHolder}>
               <Button href="/#section-requestDemo" size="xl">
                 Request demo
@@ -32,7 +32,7 @@ export default function Hero({ title, subTitle }) {
           </Motion>
         </>
       </Container>
-      <Motion animation="fadeIn" delayIndex={4}>
+      <Motion animation="fadeIn" delayIndex={0.75}>
         <div className={styles.bg}>
           <ReactPlayer
             playing={true}

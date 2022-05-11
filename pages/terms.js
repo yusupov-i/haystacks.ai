@@ -8,7 +8,7 @@ export default function Terms() {
     <>
       <Head>
         <title>Haystacks.ai Terms</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <EntrySection data={data.entry} />
     </>

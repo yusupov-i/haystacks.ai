@@ -5,9 +5,8 @@ import { useEffect } from 'react';
 import styles from './Motion.module.scss';
 
 const TRANSITION_TYPE = 'spring';
-const TRANSITION_DURATION = 0.3;
-const FADE_IN_TRANSITION_TYPE = 'easeOut';
-const FADE_IN_TRANSITION_DURATION = 0.3;
+const TRANSITION_DURATION = 1;
+const BOUNCE_INDEX = 0.3;
 
 const animationVariant = {
   fadeInUp: {
@@ -17,8 +16,9 @@ const animationVariant = {
       y: 0,
       transition: {
         type: TRANSITION_TYPE,
-        bounce: 0.4,
-        delay: delay * TRANSITION_DURATION
+        duration: TRANSITION_DURATION,
+        bounce: BOUNCE_INDEX,
+        delay: delay
       }
     })
   },
@@ -29,8 +29,9 @@ const animationVariant = {
       y: 0,
       transition: {
         type: TRANSITION_TYPE,
-        bounce: 0.4,
-        delay: delay * TRANSITION_DURATION
+        duration: TRANSITION_DURATION,
+        bounce: BOUNCE_INDEX,
+        delay: delay
       }
     })
   },
@@ -41,8 +42,9 @@ const animationVariant = {
     visible: (delay) => ({
       opacity: 1,
       transition: {
-        type: FADE_IN_TRANSITION_TYPE,
-        delay: delay * FADE_IN_TRANSITION_DURATION
+        type: 'easeOut',
+        duration: 0.65,
+        delay: delay
       }
     })
   }
@@ -50,12 +52,14 @@ const animationVariant = {
 
 export default function Motion({
   animation = 'fadeInUp',
-  delayIndex = 1,
+  delayIndex = 0,
+  threshold = 0.15,
   children
 }) {
   const control = useAnimation();
+
   const [ref, inView] = useInView({
-    threshold: 0.05
+    threshold: threshold
   });
 
   useEffect(() => {

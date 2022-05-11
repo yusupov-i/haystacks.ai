@@ -13,7 +13,7 @@ export default function Footer() {
     <footer>
       <Banner
         text="Work at Haystacks.ai - We are looking for people who want to build and disrupt"
-        href="mailto:someone@web.com"
+        href="mailto:hello@haystacks.ai"
       />
       <div className={styles.up}>
         <Container>
@@ -21,7 +21,7 @@ export default function Footer() {
             <div className={styles.logo}>
               <Link href="/" passHref>
                 <a>
-                  <Image src={logo} alt="Haystack logo" />
+                  <Image src={logo} layout="intrinsic" alt="Haystack logo" />
                 </a>
               </Link>
             </div>

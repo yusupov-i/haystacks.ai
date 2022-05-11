@@ -17,7 +17,7 @@ export default function HeroInner({ title, subTitle, variant = 'center' }) {
             </Motion>
           )}
           {subTitle && (
-            <Motion delayIndex={1.2}>
+            <Motion delayIndex={0.25}>
               <p className={styles.subTitle}>{subTitle}</p>
             </Motion>
           )}

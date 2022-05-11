@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
-import Motion from '../Motion';
 import styles from './ScrollingLogo.module.scss';
 
 export default function ScrollingLogo() {
   const [position, setPosition] = useState(0);
-  const SCROLL_MOMENTUM = -0.05;
+  const SCROLL_MOMENTUM = -0.25;
 
   const LineElements = () => {
     return (
       <>
         <div className={styles.lineElement}></div>
-        <div className={styles.lineElement}></div>
-        <div className={styles.lineElement}></div>
+        {/* <div className={styles.lineElement}></div>
+        <div className={styles.lineElement}></div> */}
       </>
     );
   };
@@ -37,15 +36,13 @@ export default function ScrollingLogo() {
   }, []);
 
   return (
-    <Motion animation="fadeIn">
-      <div className={styles.wrap}>
-        <div
-          className={styles.line}
-          style={{ transform: `translateX(${position}%)` }}
-        >
-          <LineElements />
-        </div>
+    <div className={styles.wrap}>
+      <div
+        className={styles.line}
+        style={{ transform: `translateX(${position}%)` }}
+      >
+        <LineElements />
       </div>
-    </Motion>
+    </div>
   );
 }

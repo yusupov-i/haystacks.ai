@@ -25,11 +25,7 @@
 }
 
 .title {
-  margin-bottom: 0.78em;
-
-  @include media("<phone") {
-    margin-bottom: 0.6em;
-  }
+  margin-bottom: 0.39em;
 
   @include media("<phone-sm") {
     max-width: 335px;
@@ -45,11 +41,9 @@
 }
 
 .subTitle {
-  margin-bottom: 3.1em;
+  margin-bottom: 1.5em;
 
   @include media("<phone") {
-    margin-bottom: 1.5em;
-
     br {
       display: none;
     }

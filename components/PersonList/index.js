@@ -14,9 +14,8 @@ export default function PersonList({ cards }) {
         opacity: 1,
         transition: {
           staggerChildren: 0.4,
-          type: 'spring',
-          bounce: 0.4,
-          delay: 0.3
+          type: 'easeOut',
+          duration: 0.65
         }
       })
     },

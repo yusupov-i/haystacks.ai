@@ -10,11 +10,10 @@ export default function Technology() {
     <>
       <Head>
         <title>Haystacks.ai Technology</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <HeroInner {...data.hero} />
       <Promo items={data.promo} />
-      <Divider />
     </>
   );
 }

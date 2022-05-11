@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Head>
         <title>Haystacks.ai Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Hero {...data.hero} />
       <Banner {...data.banner} />

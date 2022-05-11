@@ -8,7 +8,7 @@ export default function RequestDemo() {
   return (
     <section className={styles.section} id="section-requestDemo">
       <Container>
-        <Motion>
+        <Motion animation="fadeIn">
           <FormDemo />
         </Motion>
       </Container>

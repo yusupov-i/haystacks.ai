@@ -15,7 +15,7 @@
   text-transform: uppercase;
   letter-spacing: 0.21em;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   @include media("<phone") {
     font-size: 13px;
@@ -72,6 +72,14 @@
 
     &:hover {
       color: var(--color-green-light);
+
+      &:after {
+        transform: translateY(-1px) translateX(5px);
+      }
+
+      &:before {
+        transform: translateY(-1px) translateX(-5px);
+      }
     }
 
     &:after,
@@ -88,6 +96,7 @@
       justify-content: center;
       background-color: var(--color-green-light);
       color: var(--color-black);
+      transition: inherit;
       transform: translateY(-1px);
     }
 
